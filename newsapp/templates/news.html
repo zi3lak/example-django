@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>News</title>
+</head>
+<body>
+    <h1>Latest Bitcoin News</h1>
+    <div class="container">
+        {% for article in articles %}
+            <div class="article">
+                <img src="{% if article.urlToImage %}{{ article.urlToImage }}{% else %}/static/default-image.jpg{% endif %}" alt="{{ article.title }}" style="width:100px; height:auto;">
+                <strong>{{ article.title }}</strong><br>
+                {{ article.description }}<br>
+                <a href="{{ article.url }}" target="_blank">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="sponsors">
+        <h2>Our Sponsors</h2>
+        <a href="https://earningsaibot.com" class="sponsor-button">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stedas.hr%2Fpics%2Fpng%2Fairdrops-flr-dflr-xrp-holders.png&f=1&nofb=1&ipt=4fccef1ae2915d923db8c2235655d165a8f6a8bd33919ed3bbb009834996f5cd&ipo=images" alt="Sponsor 1" style="width:100px; height:auto;">
+        </a>
+        <a href="https://earningsaibot.com" class="sponsor-button">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stedas.hr%2Fpics%2Fpng%2Fairdrops-flr-dflr-xrp-holders.png&f=1&nofb=1&ipt=4fccef1ae2915d923db8c2235655d165a8f6a8bd33919ed3bbb009834996f5cd&ipo=images" alt="Sponsor 2" style="width:100px; height:auto;">
+        </a>
+        <a href="https://earningsaibot.com" class="sponsor-button">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stedas.hr%2Fpics%2Fpng%2Fairdrops-flr-dflr-xrp-holders.png&f=1&nofb=1&ipt=4fccef1ae2915d923db8c2235655d165a8f6a8bd33919ed3bbb009834996f5cd&ipo=images" alt="Sponsor 3" style="width:100px; height:auto;">
+        </a>
+        <a href="https://earningsaibot.com" class="sponsor-button">
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.stedas.hr%2Fpics%2Fpng%2Fairdrops-flr-dflr-xrp-holders.png&f=1&nofb=1&ipt=4fccef1ae2915d923db8c2235655d165a8f6a8bd33919ed3bbb009834996f5cd&ipo=images" alt="Sponsor 4" style="width:100px; height:auto;">
+        </a>
+    </div>
+</body>
+</html>
+
